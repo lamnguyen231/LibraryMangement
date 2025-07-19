@@ -1,0 +1,54 @@
+﻿<Window x:Class="LibraryPRN.MemberDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryPRN"
+        mc:Ignorable="d"
+        Title="MemberDetails" Height="450" Width="400" Background="#2E2E2E">
+    <Grid>
+        <GroupBox Header="Member details" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Background="#1e1e1e" Foreground="White">
+            <StackPanel Margin="10">
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <Label Content="ID:" Width="110" Foreground="White"/>
+                    <TextBox x:Name="MemberId" Width="200" IsEnabled="False" Background="#1e1e1e" Foreground="LightGray" BorderThickness="0" VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <Label Content="Name:" Width="110" Foreground="White"/>
+                    <TextBox x:Name="MemberName" Width="200" Background="#1e1e1e" Foreground="LightGray" BorderThickness="0" VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <Label Content="Join Date:" Width="110" Foreground="White"/>
+                    <DatePicker x:Name="MemberJoinDate" Width="200" BorderThickness="0" VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <Label Content="Email:" Width="110" Foreground="White"/>
+                    <TextBox x:Name="MemberEmail" Width="200" Background="#1e1e1e" Foreground="LightGray" BorderThickness="0" VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <Label Content="Password:" Width="110" Foreground="White"/>
+                    <PasswordBox x:Name="MemberPassword" Width="200" Background="#1e1e1e" Foreground="LightGray" BorderThickness="0" VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5">
+                    <Label Content="Confirm Password:" Width="110" Foreground="White"/>
+                    <PasswordBox x:Name="MemberConfirmPassword" Width="200" Background="#1e1e1e" Foreground="LightGray" BorderThickness="0" VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel x:Name="RolePanel" Orientation="Horizontal" Margin="0,5">
+                    <Label Content="Role:" Width="110" Foreground="White" VerticalAlignment="Center"/>
+                    <RadioButton x:Name="RoleUser" Content="User" GroupName="RoleGroup" Foreground="White" VerticalAlignment="Center"/>
+                    <RadioButton x:Name="RoleAdmin" Content="Admin" GroupName="RoleGroup" Foreground="White" VerticalAlignment="Center" Margin="50,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,10" HorizontalAlignment="Center">
+                    <Button x:Name="btnMemberSave" Content="Save" Width="75" Margin="5" Click="BtnMemberSave_Click" />
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
